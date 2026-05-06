@@ -1,0 +1,30 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Embedder-Policy = "require-corp"
+
+[[headers]]
+  for = "/*.gz"
+  [headers.values]
+    Content-Encoding = "gzip"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Embedder-Policy = "require-corp"
+
+[[headers]]
+  for = "/*.js.gz"
+  [headers.values]
+    Content-Type = "application/javascript"
+    Content-Encoding = "gzip"
+
+[[headers]]
+  for = "/*.wasm.gz"
+  [headers.values]
+    Content-Type = "application/wasm"
+    Content-Encoding = "gzip"
+
+[[headers]]
+  for = "/*.data.gz"
+  [headers.values]
+    Content-Type = "application/octet-stream"
+    Content-Encoding = "gzip"
